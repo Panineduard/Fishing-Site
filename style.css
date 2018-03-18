@@ -75,11 +75,6 @@ select {
 );
 }
 
-button, input[type="reset"], input[type="submit"], input[type="button"], a.button, .button {
-    background: #78b2d2 url(/images/button_bg.png) repeat-x left top;
-    border: none;
-}
-
 .nav {
     position: relative;
     margin: 0 0 0 0;
