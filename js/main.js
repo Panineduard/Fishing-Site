@@ -1,7 +1,4 @@
-﻿
-$(document).ready(function () {
-
-
+﻿$(document).ready(function () {
         $("#about").click(
             function () {
                 $('html, body').animate({scrollTop: '500px'}, 800);
@@ -34,23 +31,22 @@ $(document).ready(function () {
                 $('#overlay').click(function () { // ловим клик по крестику или подложке
                     ob
                         .animate({opacity: 0, top: '45%'}, 200,  // плавно меняем прозрачность на 0 и одновременно двигаем окно вверх
-                        function () { // после анимации
-                            ob.css('display', 'block') // убираем у модального окна display: none;
-                                .css("width", "16%")
-                                .css("left", "0")
-                                .css("opacity", "1")
-                                .css("position", "inherit")
-                                .css("z-index", 0);
-                            $('#overlay').fadeOut(400); // скрываем подложку
-                        }
-                    );
+                            function () { // после анимации
+                                ob.css('display', 'block') // убираем у модального окна display: none;
+                                    .css("width", "16%")
+                                    .css("left", "0")
+                                    .css("opacity", "1")
+                                    .css("position", "inherit")
+                                    .css("z-index", 0);
+                                $('#overlay').fadeOut(400); // скрываем подложку
+                            }
+                        );
                 });
             }
         )
     }
 );
 jQuery(document).ready(function ($) {
-
     var jssor_1_options = {
         $FillMode: 1,
         $AutoPlay: true,
@@ -66,9 +62,6 @@ jQuery(document).ready(function ($) {
     };
 
     var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-    //responsive code begin
-    //you can remove responsive code if you don't want the slider scales while window resizing
     function ScaleSlider() {
         var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
         if (refSize) {
@@ -84,5 +77,4 @@ jQuery(document).ready(function ($) {
     $(window).bind("load", ScaleSlider);
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
-    //responsive code end
 });
